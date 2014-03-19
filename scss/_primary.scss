@@ -1,0 +1,233 @@
+/*--------------------------------*/
+/*-- Dan Cicconi, March 2014  ] --*/
+/*-- http://danwithabeard.com ] --*/
+/*--------------------------------*/
+
+* {
+	&:focus {
+		outline:none;
+	}
+}
+
+body {font-family:$body-font; background:$not-black;}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $head-font; 
+	text-transform:uppercase;
+	margin:0;
+	text-align: center;
+	color:$ice-blue;
+	font-weight:400;
+	letter-spacing:1px;
+}
+
+h1 {font-size:2em;}
+h2 {font-size:1.8em;}
+h3 {font-size:1.6em;}
+h4 {font-size:1.4em;}
+h5 {font-size:1.2em;}
+h6 {font-size:1em;}
+
+a {
+	color:$not-black;
+	text-decoration:none;
+	
+	&:hover {
+		color:$white;
+	}
+}	
+
+em {font-style:italic; font-size:1.2em;}
+
+p { font-size:1.3em; color:$not-black;}
+
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	background: url('../img/loader-anim.gif') 50% 50% no-repeat rgb(249,249,249);
+}
+
+#north {
+	width:100%;
+	height:10px;
+	position:fixed;
+	top:0;
+	background:$not-black;
+	z-index:100;
+}
+
+#salutation {
+	font-family:$head-font;
+	margin-bottom:10px;
+	color:$not-black;
+	opacity:0;
+	-webkit-transition: all 1s;
+	   -moz-transition: all 1s;	
+	     -o-transition: all 1s;
+	        transition: all 1s;
+}
+
+#dan-logo {
+	background:url(../img/dan-logo.png) no-repeat; 
+	background-size:100px; 
+	display:block; 
+	height:100px; 
+	width:100px; 
+	margin:0 auto 10px;
+	opacity:0;
+	-webkit-transition: all 1s;
+	   -moz-transition: all 1s;	
+	     -o-transition: all 1s;
+	        transition: all 1s;
+}
+
+#tagline {
+	opacity:0;
+	-webkit-transition: all 1s;
+	   -moz-transition: all 1s;	
+	     -o-transition: all 1s;
+	        transition: all 1s;
+}
+
+#button {
+	width:30px;
+	opacity:0;
+	margin:10px 0 0 0;
+	-webkit-transition: all 3s;
+	   -moz-transition: all 3s;	
+	     -o-transition: all 3s;
+	        transition: all 3s;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:0.3;
+    }
+    100% {
+        opacity:0;
+    }
+}
+@-moz-keyframes blink {
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:0.3;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+.button {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    
+    -webkit-animation-direction: normal;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: blink;
+    -webkit-animation-timing-function: ease-in-out;
+    
+-moz-animation-direction: normal;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-name: blink;
+    -moz-animation-timing-function: ease-in-out;    
+}
+
+#introduction {text-align:center; position:relative; min-height:370px; z-index:5; background-size:cover; overflow:hidden;}
+
+.video-overlay {background:url(../img/overlay-pattern.png) repeat; width:100%; height:100%; position:absolute; z-index: 9;}
+
+#intro-video {overflow:hidden; width:100%; bottom:0; right:0; position:absolute; min-width:1645px;}
+
+#greeting {
+  z-index:9999;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -40%);
+     -moz-transform: translate(-50%, -40%);
+       -o-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+   h1 {
+   	text-transform:uppercase;
+   	text-shadow: 1px 1px 1px #FFFFFF;
+   }
+
+   p {
+   	text-transform:uppercase; color:$not-black;
+   	text-shadow: 1px 1px 1px #FFFFFF;
+   		a {
+   			text-transform:uppercase; color:$not-black;
+   		}
+   	}       
+}
+
+#contact {
+	@extend #greeting;
+} 
+
+#projects-intro {background:$not-black; color:#fff; text-align:center; padding:30px 0 0 0;}
+
+img {
+	max-width: 100%;
+}
+
+.desaturate {
+ -webkit-transform: translateZ(0);
+	-webkit-filter: grayscale(100%);
+	   -moz-filter: grayscale(100%);
+	        filter: grayscale(100%);
+	-webkit-transition: all 0.3s ease-in-out;
+       -moz-transition: all 0.3s ease-in-out;
+         -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+
+	&:hover {
+		-webkit-filter: grayscale(0%);
+		-moz-filter: grayscale(0%);
+		filter: grayscale(0%);
+	}
+}
+
+.skills-list {
+	width:100%; margin:0 auto 10px; overflow:hidden;
+	
+	li {
+		width:23%; display:inline-block; padding:10px 0; text-align:center;
+		
+		a {
+			width:50px; height:50px; 
+			background-size:50px; 
+			text-indent:9999px; 
+			display:block; 
+			margin:0 auto 10px;
+		}
+	}
+}
+
+#html {background:url(../img/icons/html-lbg.png) no-repeat; background-size:50px;}
+#css {background:url(../img/icons/css-lbg.png) no-repeat; background-size:50px;}
+#php {background:url(../img/icons/php-lbg.png) no-repeat; background-size:50px;}
+#sass {background:url(../img/icons/sass.png) no-repeat; background-size:50px;}
+#js {background:url(../img/icons/js-lbg.png) no-repeat; background-size:50px;}
+#rwd {background:url(../img/icons/responsive.png) no-repeat; background-size:50px;}
+#wp {background:url(../img/icons/wp-lbg.png) no-repeat; background-size:50px;}
+#ux {background:url(../img/icons/user-experience.png) no-repeat; background-size:50px;}
+#ui {background:url(../img/icons/user-interface.png) no-repeat; background-size:50px;}
+#email-dev {background:url(../img/icons/email-dev.png) no-repeat; background-size:50px;}
+#pm {background:url(../img/icons/project-management.png) no-repeat; background-size:50px;}
+#acs {background:url(../img/icons/creative-suite.png) no-repeat; background-size:50px;}
