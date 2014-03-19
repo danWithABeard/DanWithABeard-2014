@@ -1,5 +1,4 @@
 #DanWithABeard-2014
-==================
 
 The 2014 launch of danwithabeard.com
 
