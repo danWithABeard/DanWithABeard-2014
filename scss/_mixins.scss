@@ -1,5 +1,18 @@
 $base-font-multiplier: 1 !default;
 
+@mixin animation($animation) {
+  -webkit-animation: $animation; /* Chr, Saf */
+          animation: $animation; /* IE > 9, Fx > 15, Op > 12.0 */
+}
+
+/*
+* Filter is not supported in any MIE browser or Edge
+*/
+@mixin filter($filter) {
+  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+          filter: grayscale(100%); /* None yet */
+}
+
 @mixin rem( $property, $a:0, $b:$a, $c:$a, $d:$b ) {
   @if ( $property == "font-size" ) {
     // $a is the font size
