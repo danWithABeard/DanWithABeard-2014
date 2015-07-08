@@ -6,11 +6,17 @@
   padding: 0;
 }
 
+*:focus {
+  outline:none;
+}
+
 html { 
   height: 100%;
 }
 
 body {
+  background:$not-black;
+  font-family:$body-font;
   overflow: scroll;
   overflow-x: hidden;
 }
