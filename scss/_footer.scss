@@ -1,73 +1,134 @@
-#anchor {position:relative; width:100%; height:1px;}
-
-#footer {position:fixed; bottom:0; z-index:0; background:#111 url('../img/html-code.png') no-repeat left bottom; background-size:cover; padding:20px 0;}
-
-.social { background:url(../img/rcs-social-icons.png) no-repeat; height: 40px; width: 40px; display: inline-block;
-background-size: 232px 87px; margin-top: 5px;}
-
-.facebook {background-position: 0 0;}
-.facebook:hover {background-position: 0 -43px;}
-
-.linkedin {background-position: -46px 0;}
-.linkedin:hover {background-position: -46px -43px;}
-
-.twitter {background-position: -94px 0px;}
-.twitter:hover {background-position: -94px -43px;}
-
-.instagram {background-position: -140px 0px;}
-.instagram:hover {background-position: -140px -43px;}
-
-.github {background-position: -187px 0px;}
-.github:hover {background-position: -187px -43px;}
-
-.social[title]:hover:before {
-	content: attr(title);
-	padding: 4px 8px;
-	color:$white;
-	position: absolute;
-	margin-left:10px;
-	top: -33px;
-	white-space: nowrap; 
-	z-index: 20;
-	background:$not-black;
-	-webkit-border-radius: 5px;
-	   -moz-border-radius: 5px;   
-	        border-radius: 5px;
+#anchor {
+  height: 1px;
+  position: relative;
+  width: 100%;
 }
 
-.social[title]:hover:after {
-	top: auto;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	margin: -27px 0 0 13px;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-top: 10px solid $not-black;
-	z-index: 99;
+#footer {
+  background: #111 url('../img/html-code.png') no-repeat left bottom;
+  background-size: cover;
+  bottom: 0;
+  padding: 20px 0;
+  position: fixed;
+  z-index: 0;
+}
+
+.social {
+  background: url('../img/rcs-social-icons.png') no-repeat;
+  background-size: 232px 87px;
+  display: inline-block;
+  height: 40px;
+  margin-top: 5px;
+  width: 40px;
+}
+
+.facebook {
+  background-position: 0 0;
+
+  &:hover {
+    background-position: 0 -43px;
+  }
+}
+
+.linkedin {
+  background-position: -46px 0;
+
+  &:hover {
+    background-position: -46px -43px;
+  }
+}
+
+.twitter {
+  background-position: -94px 0px;
+
+  &:hover {
+    background-position: -94px -43px;
+  }
+}
+
+.instagram {
+  background-position: -140px 0px;
+
+  &:hover {
+    background-position: -140px -43px;
+  }
+}
+
+.github {
+  background-position: -187px 0px;
+
+  &:hover {
+    background-position: -187px -43px;
+  }
+}
+
+.social[title] {
+  &:hover {
+    &:before {
+      background: $not-black;
+      border-radius: 5px;
+      color: $white;
+      content: attr(title);
+      margin-left: 10px;
+      padding: 4px 8px;
+      position: absolute;
+      top: -33px;
+      white-space: nowrap;
+      z-index: 20;
+    }
+
+    &:after {
+      border: solid transparent;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid $not-black;
+      content: " ";
+      height: 0;
+      margin: -27px 0 0 13px;
+      pointer-events: none;
+      position: absolute;
+      top: auto;
+      width: 0;
+      z-index: 99;
+    }
+  }
 }
 
 /* --- Wufoo --- */
-.wufoo label, .wufoo label.desc {font-family: 'Varela Round', sans-serif !important;}
+.wufoo label,
+.wufoo label.desc {
+  font-family: 'Varela Round', sans-serif !important;
+}
 
 @media screen and (max-width:600px) {
-  #wufooFormz1ti9kpj0vvauvw {height:610px !important;}
+  #wufooFormz1ti9kpj0vvauvw {
+    height:610px !important;
+  }
 }
 
 /* Mobile */
 
 @media all and (orientation:landscape) and (max-width:590px) { 
-	#footer {position:relative; bottom:0; z-index:1;}
+  #footer {
+    bottom: 0;
+    position: relative;
+    z-index: 1;
+  }
 }
 
 @media screen and (max-width: 480px) {
-	#footer {position:relative; bottom:0; z-index:1;}
+  #footer {
+    bottom: 0;
+    position: relative;
+    z-index: 1;
+  }
 
-	.social[title]:hover:before {
-		margin-left:-45px;
-		top: -33px; 
-	}
+  .social[title] {
+    &:hover {
+      &:before {
+        margin-left: -45px;
+        top: -33px;
+      }
+    }
+  }
 }
