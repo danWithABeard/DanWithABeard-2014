@@ -29,11 +29,6 @@ a {
   }
 }
 
-em {
-  font-size: 1.2em;
-  font-style: italic;
-}
-
 p {
   color: $not-black;
   font-size: 1.3em;
@@ -91,18 +86,7 @@ p {
 
 .button {
   transition: all 1s ease-in-out;
-    
-  -webkit-animation-direction: normal;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-name: blink;
-  -webkit-animation-timing-function: ease-in-out;
-    
-  -moz-animation-direction: normal;
-  -moz-animation-duration: 2s;
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-name: blink;
-  -moz-animation-timing-function: ease-in-out;
+  @include animation(blink 2s ease-in-out 0 infinite normal running);
 }
 
 #introduction {
@@ -123,17 +107,17 @@ p {
 }
 
 #intro-video {
-  bottom:0;
-  min-width:1645px;
-  overflow:hidden;
-  position:absolute;
-  right:0;
-  width:100%;
+  bottom: 0;
+  min-width: 1645px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  width: 100%;
 }
 
 #contact,
 #greeting {
-  z-index:9999;
+  z-index: 9999;
   position: absolute;
   left: 50%;
   top: 50%;
