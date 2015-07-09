@@ -9,8 +9,8 @@ $base-font-multiplier: 1 !default;
 * Filter is not supported in any MIE browser or Edge
 */
 @mixin filter($filter) {
-  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-          filter: grayscale(100%); /* None yet */
+  -webkit-filter: $filter; /* Ch 23+, Saf 6.0+, BB 10.0+ */
+          filter: $filter; /* None yet */
 }
 
 @mixin rem( $property, $a:0, $b:$a, $c:$a, $d:$b ) {
