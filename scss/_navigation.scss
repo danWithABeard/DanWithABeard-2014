@@ -41,36 +41,6 @@
   }        
 }
 
-@-webkit-keyframes toTopFromBottom {
-  49% {
-    -webkit-transform: translateY(-100%);
-  }
-
-  50% {
-    opacity: 0;
-    -webkit-transform: translateY(100%);
-  }
-
-  51% {
-    opacity: 1;
-  }
-}
-
-@keyframes toTopFromBottom {
-  49% {
-    transform: translateY(-100%);
-  }
-
-  50% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-
-  51% {
-    opacity: 1;
-  }
-}
-
 #mobile-menu {
   background: #333;
   border-bottom: 10px solid #252525;

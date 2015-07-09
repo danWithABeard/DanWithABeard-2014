@@ -89,34 +89,6 @@ p {
   width: 30px;
 }
 
-@-webkit-keyframes blink {
-  0% {
-    opacity:0;
-  }
-
-  50% {
-    opacity:0.3;
-  }
-
-  100% {
-    opacity:0;
-  }
-}
-
-@keyframes blink {
-  0% {
-    opacity:0;
-  }
-
-  50% {
-    opacity:0.3;
-  }
-
-  100% {
-    opacity:0;
-  }
-}
-
 .button {
   transition: all 1s ease-in-out;
     
