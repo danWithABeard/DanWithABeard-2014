@@ -56,9 +56,6 @@
       
       <!-- Introduction Video -->
       <div class="video-overlay"></div>
-      <video id="intro-video" preload autoplay loop>
-        <source id="video-source" type="video/mp4" src="" /> 
-      </video>
     </div>
     <!-- END #introduction -->
 
@@ -148,36 +145,6 @@
       </div><!-- END .container -->
     </div><!-- END .slide -->
 
-    <!-- Contact Form Section -->
-    <div class="slide" id="slide7" data-slide="3">
-      <div class="container clearfix">
-        <div class="grid_12">
-          <h2><span>Say</span> Hello!</h2>
-          <p style="text-align:center; margin-bottom:10px;">I love meeting and talking to new people, so feel free to introduce yourself.</p>
-          <p style="text-align:center; margin-bottom:20px;">:D</p>
-          <div id="wufoo-z1ti9kpj0vvauvw">
-            Fill out my <a href="https://danwithabeard.wufoo.com/forms/z1ti9kpj0vvauvw">online form</a>.
-          </div>
-    			<script type="text/javascript">var z1ti9kpj0vvauvw;(function(d, t) {
-    			  var s = d.createElement(t), options = {
-    			  'userName':'danwithabeard', 
-    			  'formHash':'z1ti9kpj0vvauvw', 
-    			  'autoResize':true,
-    			  'height':'100%',
-    			  'async':true,
-    			  'host':'wufoo.com',
-    			  'header':'hide', 
-    			  'ssl':false};
-    			  s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
-    			  s.onload = s.onreadystatechange = function() {
-    			  var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-    			  try { z1ti9kpj0vvauvw = new WufooForm();z1ti9kpj0vvauvw.initialize(options);z1ti9kpj0vvauvw.display(); } catch (e) {}};
-    			  var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-    			  })(document, 'script');</script>
-        </div><!-- END .grid -->
-      </div><!-- END .container -->
-    </div><!-- END .slide -->
-
     <!-- Footer -->
     <div class="slide" id="slide8">
       <div class="container clearfix">
@@ -201,18 +168,6 @@
 
     <div id="anchor"></div><!-- anchors parallax effect -->
 
-    <!--Begin Google Analytics -->    
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-48877020-1', 'danwithabeard.com');
-        ga('send', 'pageview');
-      </script>   
-    <!-- End Google Analytics -->
-
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
     <script src="js/script.js"></script>
@@ -229,15 +184,5 @@
         Grid.init();
       });
     </script>
-  	<script>
-  		if ((navigator.userAgent.match(/iPad/i) != null) || (navigator.userAgent.match(/iPhone/i) != null) || (navigator.userAgent.match(/iPod/i) != null)) { 
-  			document.getElementById("intro-video").style.display = "none";
-  		}
-  		function callback () {
-  			document.querySelector('#intro-video ').load();
-  			document.querySelector('#intro-video ').play();
-  		}
-  		window.addEventListener("load", callback, false);			
-  	</script>
   </body>
 </html>
