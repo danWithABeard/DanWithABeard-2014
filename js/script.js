@@ -1,24 +1,24 @@
 $( window ).load(function() {
   //declare video array with video titles
-  var video = [ "beach", "ny", "rockclimb"];
+  var background = [ "beach", "ny", "rockclimb" ];
 
   // Count the number of elements of an array
   Object.size = function(obj) {
     var size = 0, key;
     for (key in obj) {
-        if (obj.hasOwnProperty(key)) size++;
+      if (obj.hasOwnProperty(key)) size++;
     }
     return size;
   };
 
-  // Gets the size of the video array
-  var size = Object.size(video);
+  // Gets the size of the background array
+  var size = Object.size(background);
 
   //picks random number between 0 and array's total size
   var numRand = Math.floor(Math.random()*size) + parseFloat(0);
 
   //sets image background css attribute with selected background name
-  $("#introduction").css("background-image",'url(img/' + video[numRand] + '.png)');
+  $("#introduction").css("background-image",'url(img/' + background[numRand] + '.png)');
 
   //Gets the inital size of the browser window
   var h = $(window).height();
@@ -26,46 +26,42 @@ $( window ).load(function() {
   $("#introduction").css({"height" : h});
   $("#footer").css({"height" : h/3});
   $("#slide8").css({"margin-bottom" : h/3});
+});
 
-  //Adjusts slide height when window is resized
-  $(window).resize(function() {
-
-    var h = $(window).height();
-    $("#introduction").css({"height": h});
-    $("#footer").css({"height": h/3});
-    $("#slide8").css({"margin-bottom": h/3});
-
-  });
+//Adjusts slide height when window is resized
+$(window).resize(function() {
+  var h = $(window).height();
+  $("#introduction").css({"height": h});
+  $("#footer").css({"height": h/3});
+  $("#slide8").css({"margin-bottom": h/3});
 });
 
 jQuery(document).ready(function ($) {
 
   /* Rotates The Mobile Nav Icon */
-  $( '#mobile-menu-toggle' ).on({
-    click: function() {
-        $( this ).toggleClass( "rotate shift-down" );
-        $('#dan-logo-nav').toggleClass ("shift-down");
-    }
+  $( '.navigation__menu-toggle' ).on('click', function() {
+    $(this).toggleClass( "rotate shift-down" );
+    $('.dwab__logo').toggleClass ("shift-down");
   });
 
   // Hide nav on load
-  $('#mobile-menu').hide();
+  $('.navigation__wrapper').hide();
 
-  $('#mobile-menu-toggle').click(function () {
-      $("#mobile-menu").slideToggle(300);
+  $('.navigation__menu-toggle').click(function () {
+      $(".navigation__wrapper").slideToggle(300);
       return false;
   });
 
   window.setTimeout(function() {
-    $("#salutation").css({opacity:'1'});
+    $(".introduction__salutation").css({opacity:'1'});
   }, 2000);
 
   window.setTimeout(function() {
-    $("#dan-logo").css({opacity:'1'});
+    $(".introduction__logo").css({opacity:'1'});
   }, 3000);
 
   window.setTimeout(function() {
-    $("#tagline").css({opacity:'1'});
+    $("introduction__tagline").css({opacity:'1'});
   }, 4000);
 
   window.setTimeout(function() {
@@ -100,25 +96,24 @@ jQuery(document).ready(function ($) {
 
   $(window).stellar();
 
-  var links = $('.stubble').find('li');
-  slide = $('.slide');
-  button = $('.button');
-  mywindow = $(window);
-  htmlbody = $('html,body');
+  var links = $('.stubble').find('li'),
+      slide = $('.slide'),
+      button = $('.button'),
+      htmlBody = $('html,body');
 
   function goToByScroll(dataslide) {
-    htmlbody.animate({
-        scrollTop: $('.slide[data-slide="' + dataslide + '"]').offset().top
+    htmlBody.animate({
+      scrollTop: $('.slide[data-slide="' + dataslide + '"]').offset().top
     }, 2000, 'easeInOutQuint');
   }
 
-  links.click(function (e) {
+  links.click(function(e) {
     e.preventDefault();
     dataslide = $(this).attr('data-slide');
     goToByScroll(dataslide);
   });
 
-  button.click(function (e) {
+  button.click(function(e) {
     e.preventDefault();
     dataslide = $(this).attr('data-slide');
     goToByScroll(dataslide);
@@ -131,16 +126,15 @@ jQuery(document).ready(function ($) {
 
     /* show sticky menu after screen has scrolled down 650px from the top*/
     if (yPos > h) {
-        $("#dan-logo-nav").css({opacity:'1'});
+      $("#dan-logo-nav").css({opacity:'1'});
     } else {
-        $("#dan-logo-nav").css({opacity:'0'});
+      $("#dan-logo-nav").css({opacity:'0'});
     }
   });
 
   // Animate the scroll to top
-  $('#dan-logo-nav').click(function (event) {
-    event.preventDefault();
-
+  $('#dan-logo-nav').click(function(e) {
+    e.preventDefault();
     $('html, body').animate({scrollTop: 0}, 600);
   });
 });

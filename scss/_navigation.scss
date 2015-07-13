@@ -1,4 +1,4 @@
-#mobile-menu-toggle {
+.navigation__menu-toggle {
   background: url('../img/menu-icon.png') no-repeat;
   background-size: 22px;
   height: 22px;
@@ -12,7 +12,7 @@
   z-index: 999;
 }
 
-#dan-logo-nav {
+.dwab__logo {
   background: $not-black url('../img/dan-logo-nav.png') no-repeat;
   background-size: 30px;
   border-radius: 50%;
@@ -38,38 +38,36 @@
     &:before {
       @include animation(toTopFromBottom 0.3s forwards)
     }
-  }        
+  }
 }
 
-#mobile-menu {
+.navigation__wrapper {
   background: #333;
   border-bottom: 10px solid #252525;
   overflow: hidden;
   position: fixed;
   width:100%;
   z-index: 999;
+}
 
-  ul {
-    li {
-      color: #f2f2f2;
-      cursor: pointer;
-      float: left;
-      font-size: 1.3em;
-      height: 50px;
-      line-height: 2.3em;
-      text-align: center;
-      text-transform: uppercase;
-      width: 33.333333333%;
+.navigation__tab {
+  color: #f2f2f2;
+  cursor: pointer;
+  float: left;
+  font-size: 1.3em;
+  height: 50px;
+  line-height: 2.3em;
+  text-align: center;
+  text-transform: uppercase;
+  width: 33.333333333%;
 
-      &:hover {
-        background: $ice-blue;
-        color: $white;
-      }
-    }
+  &:hover {
+    background: $ice-blue;
+    color: $white;
   }
 }
 
-.stubble {
+.navigation__menu {
   margin: 0 auto;
   width:75%;
 
