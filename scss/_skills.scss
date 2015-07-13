@@ -1,0 +1,69 @@
+.skills-list {
+  overflow: hidden;
+  margin: 0 auto 10px;
+  width: 100%;
+
+  li {
+    display: inline-block;
+    padding: 10px 0;
+    text-align: center;
+    width: 23%;
+
+    a {
+      background-size: 50px;
+      display: block;
+      height: 50px;
+      margin: 0 auto 10px;
+      text-indent: 9999px;
+      width: 50px;
+    }
+  }
+}
+
+#html {
+  background-image: url('../img/icons/html-lbg.png');
+}
+
+#css {
+  background-image: url('../img/icons/css-lbg.png');
+}
+
+#php {
+  background-image: url('../img/icons/php-lbg.png');
+}
+
+#sass {
+  background-image: url('../img/icons/sass.png');
+}
+
+#js {
+  background-image: url('../img/icons/js-lbg.png');
+}
+
+#rwd {
+  background-image: url('../img/icons/responsive.png');
+}
+
+#wp {
+  background-image: url('../img/icons/wp-lbg.png');
+}
+
+#ux {
+  background-image: url('../img/icons/user-experience.png');
+}
+
+#rails {
+  background-image: url('../img/icons/rails.png');
+}
+
+#email-dev {
+  background-image: url('../img/icons/email-dev.png');
+}
+
+#git {
+  background-image: url('../img/icons/git.png');
+}
+
+#acs {
+  background-image: url('../img/icons/creative-suite.png');
+}
