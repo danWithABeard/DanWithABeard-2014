@@ -96,7 +96,7 @@ jQuery(document).ready(function ($) {
 
   $(window).stellar();
 
-  var links = $('.stubble').find('li'),
+  var waypointLinks = $('.js-waypoint__link'),
       slide = $('.slide'),
       button = $('.button'),
       htmlBody = $('html,body');
@@ -107,7 +107,7 @@ jQuery(document).ready(function ($) {
     }, 2000, 'easeInOutQuint');
   }
 
-  links.click(function(e) {
+  waypointLinks.click(function(e) {
     e.preventDefault();
     dataslide = $(this).attr('data-slide');
     goToByScroll(dataslide);
