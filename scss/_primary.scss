@@ -53,7 +53,7 @@ p {
   z-index: 100;
 }
 
-#salutation {
+.introduction__salutation {
   color: $not-black;
   font-family: $head-font;
   margin-bottom: 10px;
@@ -61,7 +61,7 @@ p {
   transition: all 1s;
 }
 
-#dan-logo {
+.introduction__logo {
   background: url('../img/dan-logo.png') no-repeat;
   background-size: 100px;
   display: block;
@@ -72,7 +72,7 @@ p {
   width: 100px;
 }
 
-#tagline {
+.introduction__tagline {
   opacity:0;
   transition: all 1s;
 }
@@ -104,15 +104,6 @@ p {
   position: absolute;
   width: 100%;
   z-index: 9;
-}
-
-#intro-video {
-  bottom: 0;
-  min-width: 1645px;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  width: 100%;
 }
 
 #contact,

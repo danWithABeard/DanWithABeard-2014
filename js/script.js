@@ -61,7 +61,7 @@ jQuery(document).ready(function ($) {
   }, 3000);
 
   window.setTimeout(function() {
-    $("introduction__tagline").css({opacity:'1'});
+    $(".introduction__tagline").css({opacity:'1'});
   }, 4000);
 
   window.setTimeout(function() {
