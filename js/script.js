@@ -112,28 +112,23 @@ jQuery(document).ready(function ($) {
     dataslide = $(this).attr('data-slide');
     goToByScroll(dataslide);
   });
+});
 
-  button.click(function(e) {
-    e.preventDefault();
-    dataslide = $(this).attr('data-slide');
-    goToByScroll(dataslide);
-  });
+$(window).scroll(function () {
+  //Gets the inital size of the browser window
+  var h = $(window).height() - 50;
+  var yPos = $(window).scrollTop();
+  var $dwabLogo = $(".dwab__logo");
 
-  $(window).scroll(function () {
-    //Gets the inital size of the browser window
-    var h = $(window).height() - 50;
-    var yPos = $(window).scrollTop();
-
-    /* show sticky menu after screen has scrolled down 650px from the top*/
-    if (yPos > h) {
-      $("#dan-logo-nav").css({opacity:'1'});
-    } else {
-      $("#dan-logo-nav").css({opacity:'0'});
-    }
-  });
+  /* show sticky menu after screen has scrolled down 650px from the top*/
+  if (yPos > h) {
+    $dwabLogo.css({opacity:'1'});
+  } else {
+    $dwabLogo.css({opacity:'0'});
+  }
 
   // Animate the scroll to top
-  $('#dan-logo-nav').click(function(e) {
+  $dwabLogo.off('click').on('click', function(e) {
     e.preventDefault();
     $('html, body').animate({scrollTop: 0}, 600);
   });
