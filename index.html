@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>    
+  <head>
     <meta name="description" content="The online web design portfolio of Dan Cicconi.">
     <meta name="keywords" content="Web, Developer, Beard, Brooklyn, New York, Dan Cicconi, HTML, PHP, WordPress, CSS, Development">
     <meta name="author" content="Dan Cicconi">
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=0"/>
-	
+
     <title>Dan Cicconi | Web Developer | Dan With A Beard | Brooklyn, NY</title>
     <link rel="shortcut icon" href="http://danwithabeard.com/ontogenesis/beard-favicon.ico" type="image/x-icon" />
 
@@ -19,41 +19,37 @@
       <link href="css/mq.css" rel="stylesheet">
     <!--<![endif]-->
 
-    <script src="js/modernizr.custom.js"></script>	
+    <script src="js/modernizr.custom.js"></script>
   </head>
   <body>
-  
+
     <!-- JS Loader -->
     <div class="loader"></div>
-    
+
     <!-- Menu Controls -->
-    <div id="north"></div> 
-		<a id="mobile-menu-toggle" title="Menu" href="#"></a>
-		<a id="dan-logo-nav" title="Top of page" href="#"></a>
+    <div id="north"></div>
+		<a class="navigation__menu-toggle" title="Menu" href="#"></a>
+		<a class="dwab__logo" title="Top of page" href="#"></a>
 
     <!-- Menu -->
-    <div id="mobile-menu">	        
-			<ul class="stubble">
-			  <li data-slide="1">Work</li>
-			  <li data-slide="2">About</li>
-			  <li data-slide="3">Contact</li>
+    <div class="navigation__wrapper">
+			<ul class="navigation__menu">
+			  <li class="navigation__tab js-waypoint__link" data-slide="1">Work</li>
+			  <li class="navigation__tab js-waypoint__link" data-slide="2">About</li>
+			  <li class="navigation__tab js-waypoint__link" data-slide="3">Contact</li>
 			</ul>
 		</div>
-	
+
     <!-- Start #introduction -->
     <div id="introduction">
       <div id="greeting">
-				<h1 id="salutation">Hi, I'm</h1>
-        <a id="dan-logo" title="Dan Cicconi | Web Developer | Brooklyn, NY"></a>
-				<p id="tagline">I'm decorating my little corner of the internet.</p>
-        <ul class="stubble">
-          <li data-slide="1">
-            <img id="button" alt="down arrow" src="img/icons/down-lbg.png">
-          </li>
-        </ul>
+				<h1 class="introduction__salutation">Hi, I'm</h1>
+        <a class="introduction__logo" title="Dan Cicconi | Web Developer | Brooklyn, NY"></a>
+				<p class="introduction__tagline">I'm decorating my little corner of the internet.</p>
+        <img class="introduction__down-arrow js-waypoint__link" id="button" alt="down arrow" src="img/icons/down-lbg.png" data-slide="1" />
 			</div>
-      <!-- END #greeting -->		
-      
+      <!-- END #greeting -->
+
       <!-- Introduction Video -->
       <div class="video-overlay"></div>
     </div>
@@ -65,7 +61,7 @@
         <div class="grid_12 omega">
           <h2><span>My</span> Work</h2>
         </div>
-        
+
         <div class="main">
           <ul id="og-grid" class="og-grid">
             <li>
@@ -97,7 +93,7 @@
               <a href="http://danwithabeard.com/exploring-the-arts-newsletter" data-largesrc="img/portfolio/exploring-arts-mobile.png" data-title="Exploring The Arts" data-skill="Email Development" data-description="Started in 1999 by Tony Bennett and Susan Benedetto, Exploring the Arts is an nonprofit organization dedicated to strengthing the arts within public education. They wanted to give their monthly newsletter a fresh, modern and professional redesign.">
                 <img class="desaturate" src="img/thumbs/exploring-the-arts-thumb.jpg" alt="Exploring The Arts on mobile"/>
               </a>
-            </li>         
+            </li>
           </ul>
 		    </div><!-- END .main -->
       </div><!-- END .container -->
@@ -109,7 +105,7 @@
         <div class="grid_4">
           <img class="desaturate" alt="Dan Cicconi and his beard." src="img/dan-cicconi.jpg"/>
         </div>
-        
+
         <div class="grid_8 omega">
           <h2><span>My name is</span> Dan Cicconi.</h2>
           <h6><span>I'm a</span> front-end web developer <span>based in Brooklyn, NY.</span></h6>
@@ -125,7 +121,7 @@
         <div class="grid_12">
           <h2><span>Skills &amp;</span> Experience</h2>
         </div>
-        
+
         <div class="grid_12 omega">
           <ul class="skills-list">
             <li><a id="html" title="HTML"></a>HTML</li>
@@ -150,21 +146,20 @@
       <div class="container clearfix">
         <div class="grid_6">
           <div id="social-wrapper">
-            <a class="social facebook" href="https://www.facebook.com/danCicconi" title="Friend Dan on Facebook" target="_blank"></a>
             <a class="social instagram" href="http://instagram.com/danboxcicconi" title="Follow Dan on Instagram" target="_blank"></a>
             <a class="social twitter" href="https://twitter.com/danWithABeard" title="or on Twitter @danwithabeard" target="_blank"></a>
             <a class="social linkedin" href="http://www.linkedin.com/in/danielcicconi/" title="Connect with Dan on LinkedIn" target="_blank"></a>
             <a class="social github" href="https://github.com/danWithABeard" title="Fork with Dan on Github" target="_blank"></a>
           </div>
-        </div> 
-        
+        </div>
+
         <div class="grid_6 omega">
             <p id="copyright">&copy; 2015. All rights reserved.</p>
         </div>
-      </div><!-- END .container -->  
+      </div><!-- END .container -->
     </div><!-- END .slide -->
 
-    <div class="slide" id="footer"></div><!-- Code view -->    
+    <div class="slide" id="footer"></div><!-- Code view -->
 
     <div id="anchor"></div><!-- anchors parallax effect -->
 
@@ -178,7 +173,7 @@
       $(window).load(function() {
         $(".loader").fadeOut("slow");
       });
-    </script> 
+    </script>
     <script>
       $(function() {
         Grid.init();
