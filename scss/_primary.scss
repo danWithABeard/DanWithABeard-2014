@@ -53,6 +53,16 @@ p {
   z-index: 100;
 }
 
+#introduction {
+  background-color: $ice-blue;
+  background-size: cover;
+  min-height: 370px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  z-index: 5;
+}
+
 .introduction__salutation {
   color: $not-black;
   font-family: $head-font;
@@ -87,15 +97,6 @@ p {
 .button {
   transition: all 1s ease-in-out;
   @include animation(blink 2s ease-in-out 0 infinite normal running);
-}
-
-#introduction {
-  background-size: cover;
-  min-height: 370px;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  z-index: 5;
 }
 
 .video-overlay {

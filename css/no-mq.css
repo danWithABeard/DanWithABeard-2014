@@ -561,6 +561,15 @@ p {
   width: 100%;
   z-index: 100; }
 
+#introduction {
+  background-color: #25A7CA;
+  background-size: cover;
+  min-height: 370px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  z-index: 5; }
+
 .introduction__salutation {
   color: #232323;
   font-family: "Bebas", sans-serif;
@@ -594,14 +603,6 @@ p {
   /* Chr, Saf */
   animation: blink 2s ease-in-out 0 infinite normal running;
   /* IE > 9, Fx > 15, Op > 12.0 */ }
-
-#introduction {
-  background-size: cover;
-  min-height: 370px;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  z-index: 5; }
 
 .video-overlay {
   background: url("../img/overlay-pattern.png") repeat;
