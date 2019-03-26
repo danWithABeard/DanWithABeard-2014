@@ -1,6 +1,6 @@
 $( window ).load(function() {
   //declare video array with video titles
-  var background = [ "beach", "ny", "rockclimb" ];
+  var background = [ "beach", "ny" ];
 
   // Count the number of elements of an array
   Object.size = function(obj) {
@@ -68,23 +68,6 @@ jQuery(document).ready(function ($) {
     $("#button").css({opacity:'1'});
     $("#button").addClass('button');
   }, 5000);
-
-  var waypointLinks = $('.js-waypoint__link'),
-      slide = $('.slide'),
-      button = $('.button'),
-      htmlBody = $('html,body');
-
-  function goToByScroll(dataslide) {
-    htmlBody.animate({
-      scrollTop: $('.slide[data-slide="' + dataslide + '"]').offset().top
-    }, 2000, 'easeInOutQuint');
-  }
-
-  waypointLinks.click(function(e) {
-    e.preventDefault();
-    dataslide = $(this).attr('data-slide');
-    goToByScroll(dataslide);
-  });
 });
 
 $(window).scroll(function () {
@@ -106,3 +89,5 @@ $(window).scroll(function () {
     $('html, body').animate({scrollTop: 0}, 600);
   });
 });
+
+$(window).load(function() { $(".loader").fadeOut("slow"); });
