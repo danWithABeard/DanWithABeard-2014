@@ -1,43 +1,15 @@
 $( window ).load(function() {
-  //declare video array with video titles
+  /** declare video array with video titles */
   var background = [ "beach", "ny" ];
 
-  // Count the number of elements of an array
-  Object.size = function(obj) {
-    var size = 0, key;
-    for (key in obj) {
-      if (obj.hasOwnProperty(key)) size++;
-    }
-    return size;
-  };
+  /** picks random number between 0 and array's total size */
+  var numRand = Math.floor(Math.random() * background.length) + parseFloat(0);
 
-  // Gets the size of the background array
-  var size = Object.size(background);
-
-  //picks random number between 0 and array's total size
-  var numRand = Math.floor(Math.random()*size) + parseFloat(0);
-
-  //sets image background css attribute with selected background name
+  /** sets image background css attribute with selected background name */
   $("#introduction").css("background-image",'url(img/' + background[numRand] + '.png)');
-
-  //Gets the inital size of the browser window
-  var h = $(window).height();
-
-  $("#introduction").css({"height" : h});
-  $("#footer").css({"height" : h/3});
-  $("#slide8").css({"margin-bottom" : h/3});
-});
-
-//Adjusts slide height when window is resized
-$(window).resize(function() {
-  var h = $(window).height();
-  $("#introduction").css({"height": h});
-  $("#footer").css({"height": h/3});
-  $("#slide8").css({"margin-bottom": h/3});
 });
 
 jQuery(document).ready(function ($) {
-
   /* Rotates The Mobile Nav Icon */
   $( '.navigation__menu-toggle' ).on('click', function() {
     $(this).toggleClass( "rotate shift-down" );

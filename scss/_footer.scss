@@ -1,18 +1,3 @@
-#anchor {
-  height: 1px;
-  position: relative;
-  width: 100%;
-}
-
-#footer {
-  background: #111 url('../img/html-code2.png') no-repeat left bottom;
-  background-size: cover;
-  bottom: 0;
-  padding: 20px 0;
-  position: fixed;
-  z-index: 0;
-}
-
 .social {
   background: url('../img/rcs-social-icons.png') no-repeat;
   background-size: 232px 87px;
@@ -20,14 +5,6 @@
   height: 40px;
   margin-top: 5px;
   width: 40px;
-}
-
-.facebook {
-  background-position: 0 0;
-
-  &:hover {
-    background-position: 0 -43px;
-  }
 }
 
 .linkedin {
@@ -74,45 +51,6 @@
       top: auto;
       width: 0;
       z-index: 99;
-    }
-  }
-}
-
-/* --- Wufoo --- */
-.wufoo label,
-.wufoo label.desc {
-  font-family: 'Varela Round', sans-serif !important;
-}
-
-@media screen and (max-width:600px) {
-  #wufooFormz1ti9kpj0vvauvw {
-    height:610px !important;
-  }
-}
-
-/* Mobile */
-
-@media all and (orientation:landscape) and (max-width:590px) {
-  #footer {
-    bottom: 0;
-    position: relative;
-    z-index: 1;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  #footer {
-    bottom: 0;
-    position: relative;
-    z-index: 1;
-  }
-
-  .social[title] {
-    &:hover {
-      &:before {
-        margin-left: -45px;
-        top: -33px;
-      }
     }
   }
 }
