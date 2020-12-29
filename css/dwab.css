@@ -55,34 +55,6 @@ table {
   border-spacing: 0;
 }
 
-@font-face {
-  font-family: "Miso";
-  src: url("../font/miso/miso-regular.eot");
-  src: url("../font/miso/miso-regular.eot?#iefix") format("embedded-opentype"), url("../font/miso/miso-regular.woff") format("woff"), url("../font/miso/miso-regular.ttf") format("truetype"), url("../font/miso/miso-regular.svg#misoregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Bebas";
-  src: url("../font/bebas/bebas.eot");
-  src: url("../font/bebas/bebas.eot?#iefix") format("embedded-opentype"), url("../font/bebas/bebas.woff") format("woff"), url("../font/bebas/bebas.ttf") format("truetype"), url("../font/bebas/bebas.svg#bebasregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Bebas Neue";
-  src: url("../font/bebas-neue/bebas-neue-light.eot");
-  src: url("../font/bebas-neue/bebas-neue-light.eot?#iefix") format("embedded-opentype"), url("../font/bebas-neue/bebas-neue-light.woff") format("woff"), url("../font/bebas-neue/bebas-neue-light.ttf") format("truetype"), url("../font/bebas-neue/bebas-neue-light.svg#bebasregular") format("svg");
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Bebas Neue";
-  src: url("../font/bebas-neue/bebas-neue-thin.eot");
-  src: url("../font/bebas-neue/bebas-neue-thin.eot?#iefix") format("embedded-opentype"), url("../font/bebas-neue/bebas-neue-thin.woff") format("woff"), url("../font/bebas-neue/bebas-neue-thin.ttf") format("truetype"), url("../font/bebas-neue/bebas-neue-thin.svg#bebasregular") format("svg");
-  font-weight: 300;
-  font-style: normal;
-}
 @-webkit-keyframes blink {
   0% {
     opacity: 0;
@@ -273,15 +245,11 @@ html {
 
 body {
   background: #232323;
-  font-family: "Miso", sans-serif !important;
+  font-family: sans-serif;
   overflow: scroll;
   overflow-x: hidden;
 }
 
-/*
-* Clearfix hack by Nicolas Gallagher:
-* http://nicolasgallagher.com/micro-clearfix-hack/
-*/
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -475,7 +443,7 @@ body {
 .og-details h6::before {
   color: #232323;
   content: "Skills: ";
-  font-family: "Bebas Neue", sans-serif;
+  font-family: sans-serif;
   font-size: 1.3em;
   font-weight: 100;
 }
@@ -610,7 +578,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: #25A7CA;
-  font-family: "Bebas", sans-serif;
+  font-family: sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
   margin: 0;
@@ -687,7 +655,7 @@ p {
 
 .introduction__salutation {
   color: #232323;
-  font-family: "Bebas", sans-serif;
+  font-family: sans-serif;
   margin-bottom: 10px;
   opacity: 0;
   transition: all 1s;
@@ -887,7 +855,7 @@ img {
 }
 #slide3 h2 span {
   color: #b2b2b2;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: sans-serif;
   font-size: 1.3em;
   font-weight: 100;
 }
@@ -911,7 +879,7 @@ img {
 }
 #slide6 h2 span {
   color: #232323;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: sans-serif;
   font-size: 1.3em;
   font-weight: 100;
 }
@@ -922,7 +890,7 @@ img {
 }
 #slide6 h6 span {
   color: #232323;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: sans-serif;
   font-size: 1.3em;
   font-weight: 100;
 }
@@ -954,7 +922,7 @@ img {
 }
 #slide6b h2 span {
   color: #b2b2b2;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: sans-serif;
   font-size: 1.3em;
   font-weight: 100;
 }
@@ -979,7 +947,7 @@ img {
 }
 #slide7 h2 span {
   color: #b2b2b2;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: sans-serif;
   font-size: 1.3em;
   font-weight: 100;
 }
