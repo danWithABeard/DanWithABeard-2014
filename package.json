@@ -1,0 +1,23 @@
+{
+  "name": "danwithabeard.github.io",
+  "version": "1.5.0",
+  "description": "Originally launched in 2014, this is the current revision of DWAB's developer portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass ./scss/base.scss ./css/dwab.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danWithABeard/danWithABeard.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danWithABeard/danWithABeard.github.io/issues"
+  },
+  "homepage": "https://github.com/danWithABeard/danWithABeard.github.io",
+  "devDependencies": {
+    "sass": "^1.30.0"
+  }
+}

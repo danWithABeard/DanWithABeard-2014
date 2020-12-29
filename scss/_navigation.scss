@@ -69,11 +69,7 @@
 
 .navigation__menu {
   margin: 0 auto;
-  width:75%;
-
-  @include sb-media(36em){
-    width:40%;
-  }
+  width: 75%;
 }
 
 .rotate {
